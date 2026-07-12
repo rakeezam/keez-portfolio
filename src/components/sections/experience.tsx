@@ -1,3 +1,5 @@
+import { Star } from "@/components/doodles";
+
 function Bullets({ items }: { items: string[] }) {
   return (
     <ul className="mt-3 list-disc space-y-1.5 pl-4 marker:text-terracotta">
@@ -12,7 +14,8 @@ function Bullets({ items }: { items: string[] }) {
 
 export function Experience() {
   return (
-    <section id="experience" className="border-t border-ink/10 px-6 py-16 sm:px-12">
+    <section id="experience" className="relative border-t border-ink/10 px-6 py-16 sm:px-12">
+      <Star className="absolute right-[10%] top-6 h-4 w-4 rotate-[-10deg]" color="var(--terracotta)" />
       <div className="mx-auto max-w-5xl">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">Experience</p>
         <h2 className="mb-10 font-display text-3xl">Where I&rsquo;ve worked</h2>

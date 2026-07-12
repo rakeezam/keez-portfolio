@@ -6,6 +6,8 @@ export function Contact() {
     <section id="contact" className="relative border-t border-ink/10 px-6 py-20 text-center sm:px-12">
       <Star className="absolute left-[calc(50%-160px)] top-0 h-5.5 w-5.5 rotate-[-10deg]" color="var(--terracotta)" />
       <Star className="absolute right-[calc(50%-180px)] top-6 h-4 w-4 rotate-[16deg]" color="var(--marigold)" />
+      <Star className="absolute left-[8%] top-16 h-3.5 w-3.5 rotate-[-20deg]" color="var(--periwinkle)" />
+      <Star className="absolute right-[6%] bottom-10 h-4 w-4 rotate-[8deg]" color="var(--forest)" />
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">Contact</p>
       <h2 className="font-display text-4xl sm:text-5xl">Let&rsquo;s talk about your project 🌸</h2>
       <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-ink/60">

@@ -1,3 +1,5 @@
+import { Star } from "@/components/doodles";
+
 const ACHIEVEMENTS = [
   {
     title: "BIMA 100 Rising Star",
@@ -21,7 +23,8 @@ const ACHIEVEMENTS = [
 
 export function Achievements() {
   return (
-    <section id="achievements" className="border-t border-ink/10 px-6 py-16 sm:px-12">
+    <section id="achievements" className="relative border-t border-ink/10 px-6 py-16 sm:px-12">
+      <Star className="absolute right-[10%] top-8 h-4 w-4 rotate-[10deg]" color="var(--periwinkle)" />
       <div className="mx-auto max-w-5xl">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">Achievements &amp; Leadership</p>
         <h2 className="mb-8 font-display text-3xl">Beyond the day job</h2>

@@ -1,3 +1,5 @@
+import { Star } from "@/components/doodles";
+
 const CATEGORIES = [
   {
     name: "Frontend",
@@ -38,7 +40,9 @@ const CATEGORIES = [
 
 export function Skills() {
   return (
-    <section id="skills" className="border-t border-ink/10 px-6 py-16 sm:px-12">
+    <section id="skills" className="relative border-t border-ink/10 px-6 py-16 sm:px-12">
+      <Star className="absolute right-[5%] top-8 h-4 w-4 rotate-[-8deg]" color="var(--marigold)" />
+      <Star className="absolute left-[12%] top-40 h-3 w-3 rotate-[22deg]" color="var(--terracotta)" />
       <div className="mx-auto max-w-5xl">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">Skills</p>
         <h2 className="mb-10 font-display text-3xl">What I work with</h2>

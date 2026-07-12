@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Star } from "@/components/doodles";
 
 const CASE_STUDIES = [
   {
@@ -49,7 +50,8 @@ export function Work() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="work" className="border-t border-ink/10 px-6 py-16 sm:px-12">
+    <section id="work" className="relative border-t border-ink/10 px-6 py-16 sm:px-12">
+      <Star className="absolute left-[8%] top-6 h-3.5 w-3.5 rotate-[15deg]" color="var(--forest)" />
       <div className="mx-auto max-w-5xl">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">Selected Work</p>
         <h2 className="mb-10 font-display text-3xl">Case studies</h2>
@@ -74,9 +76,10 @@ export function Work() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className={`h-5 w-5 shrink-0 text-ink/40 transition-transform ${open ? "rotate-45" : ""}`}
+                    className="h-5 w-5 shrink-0 text-ink/40"
                   >
-                    <path d="M12 5v14M5 12h14" />
+                    <path d="M5 12h14" />
+                    {!open && <path d="M12 5v14" />}
                   </svg>
                 </button>
                 {open && (

@@ -1,4 +1,5 @@
-import { Star, Squiggle, PointArrow } from "@/components/doodles";
+import Image from "next/image";
+import { Star, Squiggle, DownArrow } from "@/components/doodles";
 
 const STACK = [
   { name: "React", tone: "bg-forest" },
@@ -12,12 +13,11 @@ export function Hero() {
     <section id="top" className="relative px-6 pb-20 pt-16 sm:px-12 sm:pt-24">
       <Star className="absolute left-[44%] top-1 h-6 w-6 rotate-[8deg]" color="var(--marigold)" />
       <Star className="absolute right-[2%] top-14 h-4 w-4 rotate-[-14deg]" color="var(--periwinkle)" />
+      <Star className="absolute left-[6%] top-24 h-3.5 w-3.5 rotate-[20deg]" color="var(--terracotta)" />
+      <Star className="absolute right-[14%] top-0 h-3 w-3 rotate-[-6deg]" color="var(--forest)" />
 
       <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-[1.28fr_1fr] sm:gap-10">
         <div>
-          <p className="mb-4 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">
-            ✨ Dubai · Freelance &amp; Contract
-          </p>
           <h1 className="font-display text-6xl leading-[0.98] sm:text-7xl">
             Hi, I&rsquo;m
             <br />
@@ -32,12 +32,6 @@ export function Hero() {
             considered, high-impact products. Five years of commercial
             experience, deep React and TypeScript expertise, and a track
             record of taking things from zero to one.
-          </p>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-ink/50">
-            Based in Dubai, UAE (British National, no visa friction for UAE
-            roles). Available for freelance and contract work, remote or
-            on-site, with a strong preference for PropTech. Also open to
-            fintech, consumer tech, and platform companies.
           </p>
           <div className="mt-7 flex flex-wrap gap-2.5">
             {STACK.map((tech) => (
@@ -72,10 +66,17 @@ export function Hero() {
         <div className="relative">
           <div className="absolute -top-9 right-6 hidden flex-col items-end gap-0.5 font-hand text-xl sm:flex">
             <span className="rotate-2">that&rsquo;s me!</span>
-            <PointArrow className="h-8 w-10 rotate-[100deg]" />
+            <DownArrow className="h-9 w-8" />
           </div>
-          <div className="flex aspect-[4/5] w-full items-end bg-gradient-to-br from-forest via-forest to-marigold p-4.5">
-            <span className="text-xs uppercase tracking-wide text-paper/55">photo placeholder</span>
+          <div className="relative aspect-[4/5] w-full overflow-hidden bg-forest">
+            <Image
+              src="/rakeeza.jpg"
+              alt="Rakeeza Malik"
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 640px) 40vw, 90vw"
+            />
           </div>
         </div>
       </div>
