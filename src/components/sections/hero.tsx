@@ -13,7 +13,7 @@ export function Hero() {
     <section id="top" className="relative px-6 pb-20 pt-16 sm:px-12 sm:pt-24">
       <Star className="absolute left-[44%] top-1 h-6 w-6 rotate-[8deg]" color="var(--marigold)" />
       <Star className="absolute right-[2%] top-14 h-4 w-4 rotate-[-14deg]" color="var(--periwinkle)" />
-      <Star className="absolute left-[6%] top-24 h-3.5 w-3.5 rotate-[20deg]" color="var(--terracotta)" />
+      <Star className="absolute left-[6%] top-24 hidden h-3.5 w-3.5 rotate-[20deg] sm:block" color="var(--terracotta)" />
       <Star className="absolute right-[14%] top-0 h-3 w-3 rotate-[-6deg]" color="var(--forest)" />
 
       <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-[1.28fr_1fr] sm:gap-10">
@@ -66,7 +66,7 @@ export function Hero() {
         <div className="relative">
           <div className="absolute -top-9 right-6 z-10 hidden flex-col items-end gap-0.5 font-hand text-xl sm:flex">
             <span className="rotate-2">that&rsquo;s me!</span>
-            <DownArrow className="h-9 w-8" />
+            <DownArrow className="h-9 w-8" mirrorY />
           </div>
           <div className="relative aspect-[4/5] w-full overflow-hidden bg-forest">
             <Image

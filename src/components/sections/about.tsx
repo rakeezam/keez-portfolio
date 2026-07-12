@@ -4,7 +4,7 @@ export function About() {
   return (
     <section id="about" className="relative border-t border-ink/10 px-6 py-16 sm:px-12">
       <Star className="absolute right-[8%] top-10 h-4 w-4 rotate-[12deg]" color="var(--marigold)" />
-      <Star className="absolute left-[3%] top-32 h-3 w-3 rotate-[-18deg]" color="var(--periwinkle)" />
+      <Star className="absolute left-[3%] top-32 hidden h-3 w-3 rotate-[-18deg] sm:block" color="var(--periwinkle)" />
       <div className="mx-auto grid max-w-5xl gap-12 sm:grid-cols-2">
         <div>
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">About</p>
@@ -37,9 +37,11 @@ export function About() {
             ["Products built from scratch", "3", "bg-marigold"],
             ["Users migrated, zero disruption", "370K+", "bg-periwinkle"],
           ].map(([label, value, dot]) => (
-            <div key={label} className="relative flex items-center justify-between border-b border-ink/10 py-4">
-              <span className={`absolute -left-4.5 h-2.5 w-2.5 ${dot}`} />
-              <span className="text-sm text-ink/60">{label}</span>
+            <div key={label} className="flex items-center justify-between border-b border-ink/10 py-4">
+              <span className="flex items-center gap-3">
+                <span className={`h-2.5 w-2.5 shrink-0 ${dot}`} />
+                <span className="text-sm text-ink/60">{label}</span>
+              </span>
               <span className="font-display text-2xl">{value}</span>
             </div>
           ))}
