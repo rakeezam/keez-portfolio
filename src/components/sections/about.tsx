@@ -1,55 +1,45 @@
-import { FadeIn } from "@/components/fade-in";
-
-const STATS = [
-  { value: "5+", label: "years experience" },
-  { value: "20+", label: "projects shipped" },
-  { value: "10+", label: "happy clients" },
-];
-
 export function About() {
   return (
-    <section id="about" className="relative px-6 py-20">
-      <div className="mx-auto max-w-3xl">
-        <FadeIn>
-          <div className="grid gap-10 rounded-4xl border border-border/60 bg-card p-8 shadow-sm sm:grid-cols-[auto_1fr] sm:p-10">
-            <div className="flex justify-center sm:justify-start">
-              <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-3xl bg-gradient-to-br from-[var(--blush)] via-[var(--lavender)] to-[var(--mint)] text-4xl shadow-inner">
-                🐣
-              </div>
+    <section id="about" className="border-t border-ink/10 px-6 py-16 sm:px-12">
+      <div className="mx-auto grid max-w-5xl gap-12 sm:grid-cols-2">
+        <div>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">About</p>
+          <h2 className="font-display text-3xl">Five years in, still building from scratch 🌿</h2>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-ink/60">
+            I&rsquo;m a full-stack engineer with five years of commercial
+            experience, specialising in React, TypeScript, and Next.js, with
+            full-stack range across Node.js, GraphQL, and AWS. I started as a
+            junior frontend developer and grew into a senior, full-stack
+            contributor who leads releases, mentors new joiners, and owns
+            products end to end.
+          </p>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-ink/60">
+            I like building things from scratch. I built an entire digital
+            estate for a major UK hospitality client across three products,
+            and I currently own a greenfield, event-driven automation
+            pipeline at Zoopla. I care about getting the details right and
+            making sure non-technical stakeholders understand the trade-offs
+            behind every decision.
+          </p>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-ink/60">
+            Recognised as a BIMA 100 Rising Star in 2024. I studied
+            Mathematics at the University of Birmingham, graduating with a
+            First.
+          </p>
+        </div>
+        <div className="flex flex-col sm:self-center">
+          {[
+            ["Years of commercial experience", "5", "bg-terracotta"],
+            ["Products built from scratch", "3", "bg-marigold"],
+            ["Users migrated, zero disruption", "370K+", "bg-periwinkle"],
+          ].map(([label, value, dot]) => (
+            <div key={label} className="relative flex items-center justify-between border-b border-ink/10 py-4">
+              <span className={`absolute -left-4.5 h-2.5 w-2.5 ${dot}`} />
+              <span className="text-sm text-ink/60">{label}</span>
+              <span className="font-display text-2xl">{value}</span>
             </div>
-
-            <div>
-              <p className="font-heading text-sm font-semibold uppercase tracking-wide text-primary">
-                About me
-              </p>
-              <h2 className="mt-2 text-2xl font-semibold text-foreground sm:text-3xl">
-                Placeholder bio heading goes here
-              </h2>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                This is placeholder about-me copy. Swap in your real story here
-                — where you started, what kind of problems you like solving,
-                and the type of teams or clients you enjoy working with. Keep
-                it short, warm, and specific to you.
-              </p>
-
-              <div className="mt-6 grid grid-cols-3 gap-4">
-                {STATS.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="rounded-2xl bg-muted px-3 py-4 text-center"
-                  >
-                    <p className="font-heading text-xl font-semibold text-foreground">
-                      {stat.value}
-                    </p>
-                    <p className="mt-1 text-[11px] leading-tight text-muted-foreground">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </FadeIn>
+          ))}
+        </div>
       </div>
     </section>
   );

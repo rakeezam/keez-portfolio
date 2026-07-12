@@ -1,28 +1,24 @@
-"use client";
-
-import { buttonVariants } from "@/components/ui/button";
-
 const LINKS = [
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Work", href: "#work" },
+  { label: "Skills", href: "#skills" },
 ];
 
 export function NavBar() {
   return (
-    <header className="sticky top-0 z-50 flex justify-center px-4 pt-4">
-      <nav className="flex w-full max-w-3xl items-center justify-between rounded-full border border-border/60 bg-card/80 px-5 py-2.5 shadow-sm backdrop-blur-md">
-        <a
-          href="#top"
-          className="font-heading text-lg font-semibold tracking-tight text-foreground"
-        >
-          keez <span aria-hidden>ᐢ..ᐢ</span>
+    <header className="px-6 pt-6 sm:px-12">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between">
+        <a href="#top" className="relative flex items-baseline gap-2 font-display text-xl">
+          rakeeza <span className="font-sans text-sm text-ink/60">ᐢ..ᐢ</span>
+          <span className="absolute -top-3.5 left-[108px] rotate-[-6deg] bg-marigold px-2.5 py-1 text-[10.5px] font-bold tracking-tight text-forest shadow-[2px_2px_0_rgba(38,34,32,0.14)] whitespace-nowrap">
+            available for freelance ✨
+          </span>
         </a>
-        <ul className="hidden items-center gap-6 text-sm font-medium text-muted-foreground sm:flex">
+        <ul className="hidden items-center gap-8 text-sm text-ink/60 sm:flex">
           {LINKS.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="transition-colors hover:text-foreground">
+              <a href={link.href} className="hover:text-ink">
                 {link.label}
               </a>
             </li>
@@ -30,12 +26,9 @@ export function NavBar() {
         </ul>
         <a
           href="#contact"
-          className={buttonVariants({
-            size: "sm",
-            className: "rounded-full bg-primary text-primary-foreground hover:bg-primary/90",
-          })}
+          className="border border-ink px-4 py-1.5 text-sm font-medium transition-colors hover:bg-forest hover:text-paper hover:border-forest"
         >
-          Say hi
+          Contact
         </a>
       </nav>
     </header>

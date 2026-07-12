@@ -1,55 +1,34 @@
-import { Mail } from "lucide-react";
-import { FadeIn } from "@/components/fade-in";
-import { buttonVariants } from "@/components/ui/button";
-import { BlobDecor } from "@/components/blob-decor";
-import { GithubIcon, LinkedinIcon } from "@/components/brand-icons";
-
-const SOCIALS = [
-  { icon: GithubIcon, label: "GitHub", href: "#" },
-  { icon: LinkedinIcon, label: "LinkedIn", href: "#" },
-  { icon: Mail, label: "Email", href: "mailto:hello@example.com" },
-];
+import { Star } from "@/components/doodles";
+import { LinkedinIcon } from "@/components/brand-icons";
 
 export function Contact() {
   return (
-    <section id="contact" className="relative px-6 py-24">
-      <BlobDecor className="-bottom-32 left-1/2 h-[380px] w-[380px] -translate-x-1/2" />
-
-      <FadeIn className="mx-auto max-w-xl text-center">
-        <div className="rounded-4xl border border-border/60 bg-card p-10 shadow-sm">
-          <p className="text-3xl">💌</p>
-          <h2 className="mt-3 text-2xl font-semibold text-foreground sm:text-3xl">
-            Let&apos;s work together
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            Have a project in mind or just want to say hi? My inbox is always
-            open — placeholder text, swap in your real pitch here.
-          </p>
-
-          <a
-            href="mailto:hello@example.com"
-            className={buttonVariants({
-              size: "lg",
-              className: "mt-6 rounded-full bg-primary px-6 text-primary-foreground shadow-md hover:bg-primary/90",
-            })}
-          >
-            <Mail className="mr-1 h-4 w-4" /> hello@example.com
-          </a>
-
-          <div className="mt-6 flex justify-center gap-3">
-            {SOCIALS.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                aria-label={social.label}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 bg-muted text-muted-foreground transition-colors hover:bg-secondary hover:text-secondary-foreground"
-              >
-                <social.icon className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </FadeIn>
+    <section id="contact" className="relative border-t border-ink/10 px-6 py-20 text-center sm:px-12">
+      <Star className="absolute left-[calc(50%-160px)] top-0 h-5.5 w-5.5 rotate-[-10deg]" color="var(--terracotta)" />
+      <Star className="absolute right-[calc(50%-180px)] top-6 h-4 w-4 rotate-[16deg]" color="var(--marigold)" />
+      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-terracotta">Contact</p>
+      <h2 className="font-display text-4xl sm:text-5xl">Let&rsquo;s talk about your project 🌸</h2>
+      <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-ink/60">
+        Freelance and contract work, remote or based in Dubai. If you&rsquo;re
+        building something in PropTech, fintech, or consumer tech, I&rsquo;d
+        like to hear about it.
+      </p>
+      <a
+        href="mailto:rakeezamalik@gmail.com"
+        className="mt-6 inline-block border-b-2 border-ink font-display text-2xl hover:border-terracotta hover:text-terracotta"
+      >
+        rakeezamalik@gmail.com
+      </a>
+      <div className="mt-8 flex justify-center gap-6 text-sm text-ink/60">
+        <a
+          href="https://www.linkedin.com/in/rakeeza-malik/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 hover:text-ink"
+        >
+          <LinkedinIcon className="h-4 w-4" /> LinkedIn
+        </a>
+      </div>
     </section>
   );
 }

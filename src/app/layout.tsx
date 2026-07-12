@@ -1,23 +1,30 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Quicksand } from "next/font/google";
+import { Plus_Jakarta_Sans, Fraunces, Caveat } from "next/font/google";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const quicksand = Quicksand({
+const fraunces = Fraunces({
   variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+});
+
+const caveat = Caveat({
+  variable: "--font-hand",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Keez — Full-Stack Developer",
+  title: "Rakeeza Malik — Full-Stack Engineer",
   description:
-    "Portfolio of Keez, a full-stack developer specializing in React, Next.js, TypeScript, and Node.js.",
+    "Rakeeza Malik, a Dubai-based Full-Stack Engineer available for freelance and contract work in PropTech, fintech, and consumer tech.",
 };
 
 export default function RootLayout({
@@ -28,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jakarta.variable} ${quicksand.variable} h-full antialiased`}
+      className={`${jakarta.variable} ${fraunces.variable} ${caveat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
