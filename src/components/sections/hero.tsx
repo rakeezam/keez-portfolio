@@ -66,7 +66,7 @@ export function Hero() {
         <div className="relative">
           <div className="absolute -top-9 right-6 z-10 hidden flex-col items-end gap-0.5 font-hand text-xl sm:flex">
             <span className="rotate-2">that&rsquo;s me!</span>
-            <DownArrow className="h-9 w-8" mirrorY />
+            <DownArrow className="h-9 w-8" flip />
           </div>
           <div className="relative aspect-[4/5] w-full overflow-hidden bg-forest">
             <Image

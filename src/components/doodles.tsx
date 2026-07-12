@@ -37,13 +37,13 @@ export function PointArrow({ className, flip }: { className?: string; flip?: boo
   );
 }
 
-export function DownArrow({ className, mirrorY }: { className?: string; mirrorY?: boolean }) {
+export function DownArrow({ className, flip }: { className?: string; flip?: boolean }) {
   return (
     <svg
       viewBox="0 0 40 46"
       fill="none"
       className={className}
-      style={mirrorY ? { transform: "scaleY(-1)" } : undefined}
+      style={flip ? { transform: "scaleX(-1)" } : undefined}
     >
       <path d="M6 4 C 8 20, 16 32, 30 38" stroke="var(--ink)" strokeWidth="2.2" fill="none" strokeLinecap="round" />
       <path d="M20 35 L30 38 L26 27" stroke="var(--ink)" strokeWidth="2.2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
